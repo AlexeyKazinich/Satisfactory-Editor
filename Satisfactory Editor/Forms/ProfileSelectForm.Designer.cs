@@ -29,56 +29,59 @@ namespace Satisfactory_Editor
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.SelectProfileButton = new System.Windows.Forms.Button();
+            this.createNewProfileButton = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // button1
+            // SelectProfileButton
             // 
-            this.button1.Location = new System.Drawing.Point(123, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SelectProfileButton.Location = new System.Drawing.Point(123, 121);
+            this.SelectProfileButton.Name = "SelectProfileButton";
+            this.SelectProfileButton.Size = new System.Drawing.Size(104, 23);
+            this.SelectProfileButton.TabIndex = 0;
+            this.SelectProfileButton.Text = "Select";
+            this.SelectProfileButton.UseVisualStyleBackColor = true;
+            this.SelectProfileButton.Click += new System.EventHandler(this.SelectProfileButton_Click);
             // 
-            // textBox1
+            // createNewProfileButton
             // 
-            this.textBox1.Location = new System.Drawing.Point(250, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.createNewProfileButton.Location = new System.Drawing.Point(123, 81);
+            this.createNewProfileButton.Name = "createNewProfileButton";
+            this.createNewProfileButton.Size = new System.Drawing.Size(104, 23);
+            this.createNewProfileButton.TabIndex = 2;
+            this.createNewProfileButton.Text = "create new profile";
+            this.createNewProfileButton.UseVisualStyleBackColor = true;
+            this.createNewProfileButton.Click += new System.EventHandler(this.createNewProfileButton_Click);
             // 
-            // button2
+            // comboBox1
             // 
-            this.button2.Location = new System.Drawing.Point(123, 81);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "create new profile";
-            this.button2.UseVisualStyleBackColor = true;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(233, 123);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 3;
             // 
-            // Form1
+            // ProfileSelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.createNewProfileButton);
+            this.Controls.Add(this.SelectProfileButton);
+            this.Name = "ProfileSelectForm";
             this.Text = "Profile Select Screen";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button SelectProfileButton;
+        private System.Windows.Forms.Button createNewProfileButton;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

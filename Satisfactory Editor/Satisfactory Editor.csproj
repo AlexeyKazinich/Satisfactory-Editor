@@ -74,6 +74,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipes\Smelter\IronIngotRecipe.cs" />
+    <EmbeddedResource Include="Forms\ProfileCreateForm.resx">
+      <DependentUpon>ProfileCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProfileSelectForm.resx">
       <DependentUpon>ProfileSelectForm.cs</DependentUpon>
     </EmbeddedResource>
