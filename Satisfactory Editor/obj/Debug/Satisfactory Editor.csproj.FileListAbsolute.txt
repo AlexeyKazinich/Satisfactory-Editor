@@ -9,3 +9,15 @@ F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\o
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory Editor.csproj.CoreCompileInputs.cache
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory Editor.exe
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory Editor.pdb
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Newtonsoft.Json.dll
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Newtonsoft.Json.xml
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory Editor.csproj.CopyComplete
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory_Editor.MainScreenForm.resources
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Microsoft.IdentityModel.Logging.dll
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Microsoft.IdentityModel.Logging.xml
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\System.IdentityModel.Tokens.Jwt.xml

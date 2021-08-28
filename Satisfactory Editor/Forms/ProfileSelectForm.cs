@@ -13,7 +13,7 @@ namespace Satisfactory_Editor
 {
     public partial class ProfileSelectForm : Form
     {
-        public string selectedProfile { get; set; }
+        public static string selectedProfile { get; set; }
 
         public ProfileSelectForm()
         {
@@ -60,7 +60,19 @@ namespace Satisfactory_Editor
 
 
                 //load the profile
+                selectedProfile = profileSelected;
+
+                //load MainScreenForm
+                MainScreenForm temp2Form = new MainScreenForm(profileSelected);
+                temp2Form.Show();
+                temp2Form.Location = this.Location;
+                this.Dispose();
             }
+        }
+
+        public string getProfileSelected()
+        {
+            return selectedProfile;
         }
     }
 }
