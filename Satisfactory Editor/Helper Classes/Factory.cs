@@ -1,5 +1,8 @@
 ﻿using Newtonsoft.Json;
 using Satisfactory_Editor.Items;
+using Satisfactory_Editor.Recipes;
+using Satisfactory_Editor.Recipes.Miner;
+using Satisfactory_Editor.Recipes.Smelter;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,15 +14,17 @@ namespace Satisfactory_Editor.Helper_Classes
 {
     public class Factory
     {
-        public List<Item> itemsList = new List<Item>();
         public IDictionary<string, Item> itemDictionary = new Dictionary<string, Item>();
+        public IDictionary<string, Recipe> recipeDictionary = new Dictionary<string, Recipe>();
         private string profileSelected = "";
         public Factory(string profile)
         {
             profileSelected = profile;
             checkContents();
+            fillRecipes();
         }
 
+        #region Saving and Reading related Methods
         private void readProfile()
         {
             using (StreamReader file = new StreamReader($"Profiles/{profileSelected}/{profileSelected}.json"))
@@ -44,7 +49,25 @@ namespace Satisfactory_Editor.Helper_Classes
             writeToProfile();
 
         }
+        
+        private void checkContents()
+        {
+            //check if the json exists in the profile
+            if (!File.Exists($"Profiles/{profileSelected}/{profileSelected}.json"))
+            {
+                //create file
+                createProfile();
+            }
+            else
+            {
+                //read the json file
+                readProfile();
+            }
+        }
+        #endregion
 
+
+        //runs once to add all items to the dictionary 
         private void addAllItems()
         {
             //Miner
@@ -156,7 +179,7 @@ namespace Satisfactory_Editor.Helper_Classes
 
             //particle accelerator
             itemDictionary.Add("plutoniumPellet", new Item());
-            
+
 
             //for space elevator
             itemDictionary.Add("smartPlating", new Item());
@@ -171,21 +194,24 @@ namespace Satisfactory_Editor.Helper_Classes
 
         }
 
-        private void checkContents()
+        //populates the recipe Dictionary
+        private void fillRecipes()
         {
-            //check if the json exists in the profile
-            if (!File.Exists($"Profiles/{profileSelected}/{profileSelected}.json"))
-            {
-                //create file
-                createProfile();
-            }
-            else
-            {
-                //read the json file
-                readProfile();
-            }
+            recipeDictionary.Add("rawCopperRecipe", new RawCopperRecipe());
+            recipeDictionary.Add("rawIronRecipe", new RawIronRecipe());
+            recipeDictionary.Add("ironIngotRecipe", new IronIngotRecipe());
+            recipeDictionary.Add("copperIngotRecipe", new CopperIngotRecipe());
         }
 
+        //this method sets all the items in the itemDictionary to 0
+        public void zeroAll()
+        {
+            foreach (KeyValuePair<string,Item> entry in itemDictionary)
+            {
+                entry.Value.amountCreating = 0;
+                entry.Value.amountUsing = 0;
+            }
+        }
 
         public void save()
         {
