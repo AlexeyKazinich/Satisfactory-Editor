@@ -208,8 +208,8 @@ namespace Satisfactory_Editor.Helper_Classes
         {
             foreach (KeyValuePair<string,Item> entry in itemDictionary)
             {
-                entry.Value.amountCreating = 0;
-                entry.Value.amountUsing = 0;
+                entry.Value.amountCreating = 5.0;
+                entry.Value.amountUsing = 5.0;
             }
         }
 

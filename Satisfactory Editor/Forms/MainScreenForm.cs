@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -27,7 +28,6 @@ namespace Satisfactory_Editor
         {
             myFactory = new Factory(profileName);
             updateAllDropDowns();
-
 
         }
 
@@ -156,7 +156,7 @@ namespace Satisfactory_Editor
         private void buttonOpenGraph_Click(object sender, EventArgs e)
         {
             //create new window
-            GraphForm tempFormGraph = new GraphForm();
+            GraphForm tempFormGraph = new GraphForm(myFactory.itemDictionary);
             tempFormGraph.Show();
             tempFormGraph.Location = this.Location;
         }

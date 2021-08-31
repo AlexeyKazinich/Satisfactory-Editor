@@ -21,3 +21,13 @@ F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\b
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Microsoft.IdentityModel.Logging.xml
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Microsoft.IdentityModel.Tokens.xml
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory_Editor.Forms.GraphForm.resources
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.dll
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.WinForms.dll
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.Wpf.dll
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.pdb
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.xml
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.WinForms.pdb
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.WinForms.xml
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.Wpf.pdb
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.Wpf.xml
