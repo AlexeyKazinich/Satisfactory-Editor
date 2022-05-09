@@ -17,12 +17,12 @@ namespace Satisfactory_Editor.Items
             amountUsing = 0.0;
         }
 
-        public double getUsage()
+        public double GetUsage()
         {
             return amountUsing;
         }
 
-        public double getCreating()
+        public double GetCreating()
         {
             return amountCreating;
         }

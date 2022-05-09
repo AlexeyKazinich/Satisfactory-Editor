@@ -30,7 +30,7 @@ namespace Satisfactory_Editor
         private void InitializeComponent()
         {
             this.buttonOpenGraph = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.changeProfileButton = new System.Windows.Forms.Button();
             this.textBoxRawCopper = new System.Windows.Forms.TextBox();
             this.buttonAddRawCopper = new System.Windows.Forms.Button();
             this.buttonRemoveRawCopper = new System.Windows.Forms.Button();
@@ -49,6 +49,7 @@ namespace Satisfactory_Editor
             this.comboBoxMinerPurity = new System.Windows.Forms.ComboBox();
             this.comboBoxMinerMk = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonOpenGraph
@@ -59,16 +60,16 @@ namespace Satisfactory_Editor
             this.buttonOpenGraph.TabIndex = 0;
             this.buttonOpenGraph.Text = "Open Graph";
             this.buttonOpenGraph.UseVisualStyleBackColor = true;
-            this.buttonOpenGraph.Click += new System.EventHandler(this.buttonOpenGraph_Click);
+            this.buttonOpenGraph.Click += new System.EventHandler(this.ButtonOpenGraph_Click);
             // 
-            // button2
+            // changeProfileButton
             // 
-            this.button2.Location = new System.Drawing.Point(12, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Change Profile";
-            this.button2.UseVisualStyleBackColor = true;
+            this.changeProfileButton.Location = new System.Drawing.Point(12, 12);
+            this.changeProfileButton.Name = "changeProfileButton";
+            this.changeProfileButton.Size = new System.Drawing.Size(75, 23);
+            this.changeProfileButton.TabIndex = 1;
+            this.changeProfileButton.Text = "Change Profile";
+            this.changeProfileButton.UseVisualStyleBackColor = true;
             // 
             // textBoxRawCopper
             // 
@@ -78,8 +79,8 @@ namespace Satisfactory_Editor
             this.textBoxRawCopper.TabIndex = 2;
             this.textBoxRawCopper.Text = "Raw Copper";
             this.textBoxRawCopper.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxRawCopper.Click += new System.EventHandler(this.textBoxRawCopper_Click);
-            this.textBoxRawCopper.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxRawCopper_KeyPress);
+            this.textBoxRawCopper.Click += new System.EventHandler(this.TextBoxRawCopper_Click);
+            this.textBoxRawCopper.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxRawCopper_KeyPress);
             // 
             // buttonAddRawCopper
             // 
@@ -89,7 +90,7 @@ namespace Satisfactory_Editor
             this.buttonAddRawCopper.TabIndex = 3;
             this.buttonAddRawCopper.Text = "Add";
             this.buttonAddRawCopper.UseVisualStyleBackColor = true;
-            this.buttonAddRawCopper.Click += new System.EventHandler(this.buttonAddRawCopper_Click);
+            this.buttonAddRawCopper.Click += new System.EventHandler(this.ButtonAddRawCopper_Click);
             // 
             // buttonRemoveRawCopper
             // 
@@ -99,7 +100,7 @@ namespace Satisfactory_Editor
             this.buttonRemoveRawCopper.TabIndex = 4;
             this.buttonRemoveRawCopper.Text = "Remove";
             this.buttonRemoveRawCopper.UseVisualStyleBackColor = true;
-            this.buttonRemoveRawCopper.Click += new System.EventHandler(this.buttonRemoveRawCopper_Click);
+            this.buttonRemoveRawCopper.Click += new System.EventHandler(this.ButtonRemoveRawCopper_Click);
             // 
             // buttonRawIronRemove
             // 
@@ -109,7 +110,7 @@ namespace Satisfactory_Editor
             this.buttonRawIronRemove.TabIndex = 7;
             this.buttonRawIronRemove.Text = "Remove";
             this.buttonRawIronRemove.UseVisualStyleBackColor = true;
-            this.buttonRawIronRemove.Click += new System.EventHandler(this.buttonRawIronRemove_Click);
+            this.buttonRawIronRemove.Click += new System.EventHandler(this.ButtonRawIronRemove_Click);
             // 
             // buttonRawIronAdd
             // 
@@ -119,7 +120,7 @@ namespace Satisfactory_Editor
             this.buttonRawIronAdd.TabIndex = 6;
             this.buttonRawIronAdd.Text = "Add";
             this.buttonRawIronAdd.UseVisualStyleBackColor = true;
-            this.buttonRawIronAdd.Click += new System.EventHandler(this.buttonRawIronAdd_Click);
+            this.buttonRawIronAdd.Click += new System.EventHandler(this.ButtonRawIronAdd_Click);
             // 
             // textBoxRawIron
             // 
@@ -129,8 +130,8 @@ namespace Satisfactory_Editor
             this.textBoxRawIron.TabIndex = 5;
             this.textBoxRawIron.Text = "Raw Iron";
             this.textBoxRawIron.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxRawIron.Click += new System.EventHandler(this.textBoxRawIron_Click);
-            this.textBoxRawIron.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxRawIron_KeyPress);
+            this.textBoxRawIron.Click += new System.EventHandler(this.TextBoxRawIron_Click);
+            this.textBoxRawIron.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxRawIron_KeyPress);
             // 
             // button7
             // 
@@ -226,7 +227,7 @@ namespace Satisfactory_Editor
             this.comboBoxMinerPurity.Name = "comboBoxMinerPurity";
             this.comboBoxMinerPurity.Size = new System.Drawing.Size(75, 21);
             this.comboBoxMinerPurity.TabIndex = 23;
-            this.comboBoxMinerPurity.SelectedIndexChanged += new System.EventHandler(this.comboBoxMinerPurity_SelectedIndexChanged);
+            this.comboBoxMinerPurity.SelectedIndexChanged += new System.EventHandler(this.ComboBoxMinerPurity_SelectedIndexChanged);
             // 
             // comboBoxMinerMk
             // 
@@ -240,7 +241,7 @@ namespace Satisfactory_Editor
             this.comboBoxMinerMk.Name = "comboBoxMinerMk";
             this.comboBoxMinerMk.Size = new System.Drawing.Size(75, 21);
             this.comboBoxMinerMk.TabIndex = 24;
-            this.comboBoxMinerMk.SelectedIndexChanged += new System.EventHandler(this.comboBoxMinerMk_SelectedIndexChanged);
+            this.comboBoxMinerMk.SelectedIndexChanged += new System.EventHandler(this.ComboBoxMinerMk_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -252,11 +253,21 @@ namespace Satisfactory_Editor
             this.label1.TabIndex = 25;
             this.label1.Text = "Miner specification";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(229, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainScreenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 459);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxMinerMk);
             this.Controls.Add(this.comboBoxMinerPurity);
@@ -275,7 +286,7 @@ namespace Satisfactory_Editor
             this.Controls.Add(this.buttonRemoveRawCopper);
             this.Controls.Add(this.buttonAddRawCopper);
             this.Controls.Add(this.textBoxRawCopper);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.changeProfileButton);
             this.Controls.Add(this.buttonOpenGraph);
             this.Name = "MainScreenForm";
             this.Text = "Form2";
@@ -289,7 +300,7 @@ namespace Satisfactory_Editor
         #endregion
 
         private System.Windows.Forms.Button buttonOpenGraph;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button changeProfileButton;
         private System.Windows.Forms.TextBox textBoxRawCopper;
         private System.Windows.Forms.Button buttonAddRawCopper;
         private System.Windows.Forms.Button buttonRemoveRawCopper;
@@ -308,5 +319,6 @@ namespace Satisfactory_Editor
         private System.Windows.Forms.ComboBox comboBoxMinerPurity;
         private System.Windows.Forms.ComboBox comboBoxMinerMk;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

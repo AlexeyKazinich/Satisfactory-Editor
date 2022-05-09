@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recipes\Miner\LimestoneRecipe.cs" />
     <Compile Include="Recipes\Miner\RawCopperRecipe.cs" />
     <Compile Include="Recipes\Miner\RawIronRecipe.cs" />
     <Compile Include="Recipes\Recipe.cs" />

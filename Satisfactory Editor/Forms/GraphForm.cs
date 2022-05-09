@@ -2,6 +2,7 @@
 using LiveCharts.Wpf;
 using Satisfactory_Editor.Helper_Classes;
 using Satisfactory_Editor.Items;
+using Satisfactory_Editor.Recipes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,10 +22,10 @@ namespace Satisfactory_Editor.Forms
         private string[] ValuesString = new string[100];
 
 
-        public GraphForm(IDictionary<string, Item> MyDictionary)
+        public GraphForm(IDictionary<string, Item> MyItemDictionary, IDictionary<string, Recipe> MyRecipeDictionary)
         {
             InitializeComponent();
-            fillVarsFromDictionary(MyDictionary);
+            fillVarsFromItemDictionary(MyRecipeDictionary,MyItemDictionary);
 
             cartesianChart1.Series = new SeriesCollection
             {
@@ -50,7 +51,7 @@ namespace Satisfactory_Editor.Forms
             cartesianChart1.AxisY.Add(new Axis
             {
                 Title = "item",
-                Labels = new[] {"raw copper", "raw Iron", "limestone", "coal"}
+                Labels = ValuesString
             });
 
             cartesianChart1.AxisX.Add(new Axis
@@ -95,6 +96,26 @@ namespace Satisfactory_Editor.Forms
             */
         }
 
+        private void fillVarsFromItemDictionary(IDictionary<string,Recipe> MyRecipeDictionary, IDictionary<string,Item> MyItemDictionary)
+        {
+            //assume copper ingor recipe
+            foreach(KeyValuePair<string,int> entry in MyRecipeDictionary["copperIngotRecipe"].GetItemUsing())
+            {
+
+                ValuesMaking.Add(MyItemDictionary[entry.Key].amountCreating);
+                ValuesUsing.Add(MyItemDictionary[entry.Key].amountUsing);
+                ValuesString.Append(entry.Key);
+            }
+            foreach(KeyValuePair<string,int> entry in MyRecipeDictionary["copperIngotRecipe"].GetItemMaking())
+            {
+                ValuesMaking.Add(MyItemDictionary[entry.Key].amountCreating);
+                ValuesUsing.Add(MyItemDictionary[entry.Key].amountUsing);
+                ValuesString.Append(entry.Key);
+
+            }
+            
+            
+        }
         private void GraphForm_Load(object sender, EventArgs e)
         {
 

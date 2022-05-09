@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Satisfactory_Editor.Recipes.Smelter
 {
-    class CopperIngotRecipe : Recipe
+    public class CopperIngotRecipe : Recipe
     {
         public IDictionary<string, int> itemUsing;
         public IDictionary<string, int> itemMaking;
@@ -16,10 +16,10 @@ namespace Satisfactory_Editor.Recipes.Smelter
         {
             itemUsing = new Dictionary<string, int>();
             itemMaking = new Dictionary<string, int>();
-            addItemUsingAndMaking();
+            AddItemUsingAndMaking();
         }
 
-        private void addItemUsingAndMaking()
+        private void AddItemUsingAndMaking()
         {
             //add to dictionary the items its using
             itemUsing.Add("rawCopper", 30);
@@ -28,7 +28,7 @@ namespace Satisfactory_Editor.Recipes.Smelter
             itemMaking.Add("copperIngot", 30);
         }
 
-        public override IDictionary<string, Item> addItem(int amount, IDictionary<string, Item> Dictionary)
+        public override IDictionary<string, Item> AddItem(int amount, IDictionary<string, Item> Dictionary)
         {
 
             foreach (KeyValuePair<string, int> entry in itemUsing)
@@ -47,7 +47,7 @@ namespace Satisfactory_Editor.Recipes.Smelter
 
 
 
-        public override IDictionary<string, Item> removeItem(int amount, IDictionary<string, Item> Dictionary)
+        public override IDictionary<string, Item> RemoveItem(int amount, IDictionary<string, Item> Dictionary)
         {
             //removes items Using from Dictionary
             foreach (KeyValuePair<string, int> entry in itemUsing)
@@ -63,6 +63,16 @@ namespace Satisfactory_Editor.Recipes.Smelter
 
             return Dictionary;
 
+        }
+
+        public override IDictionary<string, int> GetItemMaking()
+        {
+            return this.itemMaking;
+        }
+
+        public override IDictionary<string, int> GetItemUsing()
+        {
+            return this.itemUsing;
         }
     }
 }

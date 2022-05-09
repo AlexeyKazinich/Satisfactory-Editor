@@ -20,12 +20,12 @@ namespace Satisfactory_Editor.Helper_Classes
         public Factory(string profile)
         {
             profileSelected = profile;
-            checkContents();
-            fillRecipes();
+            CheckContents();
+            FillRecipes();
         }
 
         #region Saving and Reading related Methods
-        private void readProfile()
+        private void ReadProfile()
         {
             using (StreamReader file = new StreamReader($"Profiles/{profileSelected}/{profileSelected}.json"))
             {
@@ -33,7 +33,7 @@ namespace Satisfactory_Editor.Helper_Classes
             }
         }
 
-        private void writeToProfile()
+        private void WriteToProfile()
         {
             using (StreamWriter myFile2 = new StreamWriter($"Profiles/{profileSelected}/{profileSelected}.json"))
             {
@@ -41,34 +41,34 @@ namespace Satisfactory_Editor.Helper_Classes
             }
         }
 
-        private void createProfile()
+        private void CreateProfile()
         {
             //add all items to the list
-            addAllItems();
+            AddAllItems();
             //write to profile to create a json
-            writeToProfile();
+            WriteToProfile();
 
         }
         
-        private void checkContents()
+        private void CheckContents()
         {
             //check if the json exists in the profile
             if (!File.Exists($"Profiles/{profileSelected}/{profileSelected}.json"))
             {
                 //create file
-                createProfile();
+                CreateProfile();
             }
             else
             {
                 //read the json file
-                readProfile();
+                ReadProfile();
             }
         }
         #endregion
 
 
         //runs once to add all items to the dictionary 
-        private void addAllItems()
+        private void AddAllItems()
         {
             //Miner
             itemDictionary.Add("rawCopper", new Item());
@@ -195,7 +195,7 @@ namespace Satisfactory_Editor.Helper_Classes
         }
 
         //populates the recipe Dictionary
-        private void fillRecipes()
+        private void FillRecipes()
         {
             recipeDictionary.Add("rawCopperRecipe", new RawCopperRecipe());
             recipeDictionary.Add("rawIronRecipe", new RawIronRecipe());
@@ -204,7 +204,7 @@ namespace Satisfactory_Editor.Helper_Classes
         }
 
         //this method sets all the items in the itemDictionary to 0
-        public void zeroAll()
+        public void ZeroAll()
         {
             foreach (KeyValuePair<string,Item> entry in itemDictionary)
             {
@@ -213,10 +213,10 @@ namespace Satisfactory_Editor.Helper_Classes
             }
         }
 
-        public void save()
+        public void Save()
         {
             //when the user closes the form save all the content
-            writeToProfile();
+            WriteToProfile();
         }
 
 

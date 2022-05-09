@@ -1,7 +1,6 @@
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Satisfactory Editor.exe.config
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Satisfactory Editor.exe
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\Satisfactory Editor.pdb
-F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory Editor.csprojAssemblyReference.cache
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory_Editor.ProfileCreateForm.resources
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory_Editor.ProfileSelectForm.resources
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory_Editor.Properties.Resources.resources
@@ -31,3 +30,5 @@ F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\b
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.WinForms.xml
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.Wpf.pdb
 F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\bin\Debug\LiveCharts.Wpf.xml
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory Editor.csproj.AssemblyReference.cache
+F:\Git_projects\C#\satisfactory Editor\Satisfactory-Editor\Satisfactory Editor\obj\Debug\Satisfactory Editor.csproj.SuggestedBindingRedirects.cache

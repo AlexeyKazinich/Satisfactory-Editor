@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 
 namespace Satisfactory_Editor.Recipes.Miner
 {
-    class RawIronRecipe : Recipe
+    public class RawIronRecipe : Recipe
     {
         public IDictionary<string, int> itemMaking;
 
         public RawIronRecipe()
         {
             itemMaking = new Dictionary<string, int>();
-            addItemUsingAndMaking();
+            AddItemUsingAndMaking();
         }
 
-        private void addItemUsingAndMaking()
+        private void AddItemUsingAndMaking()
         {
             //add to dictionary the items its making
             itemMaking.Add("rawIron", 60);
         }
 
-        public override IDictionary<string, Item> addItem(int amount, string purity, string mk, IDictionary<string, Item> Dictionary)
+        public override IDictionary<string, Item> AddItem(int amount, string purity, string mk, IDictionary<string, Item> Dictionary)
         {
             double purityMult = 0;
             double mkMult = 0;
@@ -69,7 +69,7 @@ namespace Satisfactory_Editor.Recipes.Miner
             return Dictionary;
         }
 
-        public override IDictionary<string, Item> removeItem(int amount, string purity, string mk, IDictionary<string, Item> Dictionary)
+        public override IDictionary<string, Item> RemoveItem(int amount, string purity, string mk, IDictionary<string, Item> Dictionary)
         {
 
 
@@ -116,6 +116,16 @@ namespace Satisfactory_Editor.Recipes.Miner
 
             return Dictionary;
 
+        }
+
+        public override IDictionary<string, int> GetItemMaking()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override IDictionary<string, int> GetItemUsing()
+        {
+            throw new NotImplementedException();
         }
     }
 }

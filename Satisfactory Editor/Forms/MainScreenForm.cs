@@ -17,6 +17,18 @@ namespace Satisfactory_Editor
     {
         private string profileName = "";
         private Factory myFactory;
+
+        private enum Building
+        {
+            Miner,
+            Smelter,
+            Constructor,
+            Assembler,
+            Manufacturer,
+        }
+
+        private Building buildingState = Building.Miner; //starts off with miner
+
         public MainScreenForm(string profile)
         {
             InitializeComponent();
@@ -27,12 +39,12 @@ namespace Satisfactory_Editor
         private void Form2_Load(object sender, EventArgs e)
         {
             myFactory = new Factory(profileName);
-            updateAllDropDowns();
+            UpdateAllDropDowns();
 
         }
 
         //sets the initial value for the dropbox
-        private void updateAllDropDowns()
+        private void UpdateAllDropDowns()
         {
             //miner drop downs
             comboBoxMinerPurity.SelectedItem = "normal";
@@ -43,33 +55,33 @@ namespace Satisfactory_Editor
         private void MainScreenForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             //save all the data before closing
-            myFactory.save();
+            myFactory.Save();
         }
 
 
         #region buttons
 
         #region Raw Copper
-        private void buttonAddRawCopper_Click(object sender, EventArgs e)
+        private void ButtonAddRawCopper_Click(object sender, EventArgs e)
         {
             int amount = Int32.Parse(textBoxRawCopper.Text);
             string purity = comboBoxMinerPurity.Text;
             string mk = comboBoxMinerMk.Text;
-            myFactory.recipeDictionary["rawCopperRecipe"].addItem(amount, purity, mk, myFactory.itemDictionary);
+            myFactory.recipeDictionary["rawCopperRecipe"].AddItem(amount, purity, mk, myFactory.itemDictionary);
             textBoxRawCopper.Text = "Raw Copper";
             
         }
 
-        private void buttonRemoveRawCopper_Click(object sender, EventArgs e)
+        private void ButtonRemoveRawCopper_Click(object sender, EventArgs e)
         {
             int amount = Int32.Parse(textBoxRawCopper.Text);
             string purity = comboBoxMinerPurity.Text;
             string mk = comboBoxMinerMk.Text;
-            myFactory.recipeDictionary["rawCopperRecipe"].removeItem(amount, purity, mk, myFactory.itemDictionary);
+            myFactory.recipeDictionary["rawCopperRecipe"].RemoveItem(amount, purity, mk, myFactory.itemDictionary);
             textBoxRawCopper.Text = "Raw Copper";
         }
 
-        private void textBoxRawCopper_Click(object sender, EventArgs e)
+        private void TextBoxRawCopper_Click(object sender, EventArgs e)
         {
             textBoxRawCopper.Text = "";
         }
@@ -79,26 +91,26 @@ namespace Satisfactory_Editor
         #endregion
 
         #region Raw Iron
-        private void buttonRawIronAdd_Click(object sender, EventArgs e)
+        private void ButtonRawIronAdd_Click(object sender, EventArgs e)
         {
             int amount = Int32.Parse(textBoxRawIron.Text);
             string purity = comboBoxMinerPurity.Text;
             string mk = comboBoxMinerMk.Text;
-            myFactory.recipeDictionary["rawIronRecipe"].addItem(amount, purity, mk, myFactory.itemDictionary);
+            myFactory.recipeDictionary["rawIronRecipe"].AddItem(amount, purity, mk, myFactory.itemDictionary);
             textBoxRawCopper.Text = "Raw Iron";
 
         }
 
-        private void buttonRawIronRemove_Click(object sender, EventArgs e)
+        private void ButtonRawIronRemove_Click(object sender, EventArgs e)
         {
             int amount = Int32.Parse(textBoxRawIron.Text);
             string purity = comboBoxMinerPurity.Text;
             string mk = comboBoxMinerMk.Text;
-            myFactory.recipeDictionary["rawIronRecipe"].removeItem(amount, purity, mk, myFactory.itemDictionary);
+            myFactory.recipeDictionary["rawIronRecipe"].RemoveItem(amount, purity, mk, myFactory.itemDictionary);
             textBoxRawCopper.Text = "Raw Iron";
         }
 
-        private void textBoxRawIron_Click(object sender, EventArgs e)
+        private void TextBoxRawIron_Click(object sender, EventArgs e)
         {
             textBoxRawIron.Text = "";
         }
@@ -106,14 +118,26 @@ namespace Satisfactory_Editor
 
         #endregion
 
+        #region Limestone
+
         #endregion
 
+        #region Coal
+
+        #endregion
+
+        #region Quartz
+
+        #endregion
+
+        #endregion buttons
+
         #region comboBoxes for Miners
-        private void comboBoxMinerPurity_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxMinerPurity_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
 
-        private void comboBoxMinerMk_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxMinerMk_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
 
@@ -122,7 +146,7 @@ namespace Satisfactory_Editor
         #endregion
 
         #region Allow only numbers in textboxes
-        private void textBoxRawCopper_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBoxRawCopper_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
@@ -136,7 +160,7 @@ namespace Satisfactory_Editor
             }
         }
 
-        private void textBoxRawIron_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBoxRawIron_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
@@ -153,10 +177,10 @@ namespace Satisfactory_Editor
 
         #endregion
 
-        private void buttonOpenGraph_Click(object sender, EventArgs e)
+        private void ButtonOpenGraph_Click(object sender, EventArgs e)
         {
             //create new window
-            GraphForm tempFormGraph = new GraphForm(myFactory.itemDictionary);
+            GraphForm tempFormGraph = new GraphForm(myFactory.itemDictionary, myFactory.recipeDictionary);
             tempFormGraph.Show();
             tempFormGraph.Location = this.Location;
         }
